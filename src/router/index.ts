@@ -1,4 +1,5 @@
 import AppVue from '@/App.vue'
+import type { App } from 'vue'
 import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
@@ -7,10 +8,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      // component: HomeView
       component: AppVue
     }
   ]
 })
+
+export function setupRouter(app: App) {
+  app.use(router)
+}
 
 export default router

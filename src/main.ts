@@ -1,15 +1,16 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-
-import App from './App.vue'
-import router from './router'
-
+import router, { setupRouter } from './router'
 import 'normalize.css'
 import './assets/main.css'
+import App from './App.vue'
 
-const app = createApp(App)
+async function bootstrap() {
+  const app = createApp(App)
+  setupRouter(app)
+  app.use(createPinia())
+  await router.isReady()
+  app.mount('#app')
+}
 
-app.use(createPinia())
-app.use(router)
-
-app.mount('#app')
+bootstrap()
