@@ -5,7 +5,9 @@
     "vitest.config.*",
     "cypress.config.*",
     "playwright.config.*",
-    "vite/**/*.ts"
+    "vite/**/*.ts",
+    "mock/**/*.ts",
+    "types/**/*.d.ts"
   ],
   "compilerOptions": {
     "composite": true,

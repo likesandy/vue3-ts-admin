@@ -14,8 +14,7 @@ import { parseEnv } from './vite/utils'
 export default ({ mode, command }: ConfigEnv) => {
   const isBuild = command === 'build'
   const root = process.cwd()
-  const env = loadEnv(mode, root)
-  parseEnv(env)
+  const env = parseEnv(loadEnv(mode, root)) as ViteEnv
   return {
     plugins: setupPlugins(isBuild, env),
     reslove
