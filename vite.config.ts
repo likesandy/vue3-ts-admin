@@ -1,5 +1,5 @@
 import { loadEnv, type ConfigEnv } from 'vite'
-import plugins from './vite/plugins'
+import setupPlugins from './vite/plugins'
 import reslove from './vite/resolve'
 import { parseEnv } from './vite/utils'
 
@@ -17,7 +17,7 @@ export default ({ mode, command }: ConfigEnv) => {
   const env = loadEnv(mode, root)
   parseEnv(env)
   return {
-    plugins,
+    plugins: setupPlugins(isBuild, env),
     reslove
   }
 }
