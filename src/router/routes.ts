@@ -3,7 +3,8 @@ import type { RouteRecordRaw } from 'vue-router'
 const routes = [
   {
     path: '/',
-    name: 'home'
+    name: 'home',
+    component: () => import('@/App.vue')
   }
 ] as RouteRecordRaw[]
 

@@ -1,10 +1,9 @@
 <template>
-  <div class="bg-red-800">home</div>
+  <div class="home bg-slate-600">
+    <h2>home</h2>
+  </div>
 </template>
 
-<script setup lang="ts">
-import { env } from './types/helper'
-console.log(env.VITE_TEST1)
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped></style>
