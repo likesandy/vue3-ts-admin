@@ -6,8 +6,7 @@
     "cypress.config.*",
     "playwright.config.*",
     "vite/**/*.ts",
-    "mock/**/*.ts",
-    "types/**/*.d.ts"
+    "mock/**/*.ts"
   ],
   "compilerOptions": {
     "composite": true,
